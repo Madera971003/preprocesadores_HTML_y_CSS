@@ -1,0 +1,26 @@
+extend components/plantilla.pug
+block contenidos
+		section.intro
+			//- Lo siguiente son divs, no son necesario escribirlos
+			.intro__imagen: img(src="images/imagen.png")
+			.intro__contenido
+				h2= titulo
+				p
+					| Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+					| Proin ex mi, gravida sit amet imperdiet vel, sodales a mi. 
+					| Proin sit amet tellus nec nisl bibendum ornare nec at augue. 
+					| Integer semper feugiat varius.
+					span Proin sed urna quis orci interdum rutrum. Integer rhoncus finibus nunc, ac porttitor ex dapibus ac.
+				//- Esta es otra manera de hacerlo usando el .
+				//- p.
+				//- 	Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+				//- 	Proin ex mi, gravida sit amet imperdiet vel, sodales a mi. 
+				//- 	Proin sit amet tellus nec nisl bibendum ornare nec at augue. 
+				//- 	Integer semper feugiat varius.
+				a(class="boton") Leer Mas
+		//- ul
+		//- 	each titulo in titulos
+		//- 		li=titulo
+		main.contenido
+			each titulo in titulos
+				+caja("imagen.png", titulo, 'Lorem ipsum dolor sit amet consectetur adipisicing elit.')
